@@ -1,0 +1,234 @@
+// USER VARIABLES SECTION
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@import 'mixins'
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+$minWidth: 320px
+$maxWidth: 1380
+$maxWidthContainer: 1170
+$md1: $maxWidthContainer + 12
+$md2: 991.98
+$md3: 767.98
+$md4: 479.98 
+
+.container
+	padding: 0 15px
+	margin: 0 auto
+	width: 100%
+
+@media (min-width: $md4+px)
+	.container
+		max-width: 540px
+
+@media (min-width: $md3+px)
+	.container
+		max-width: 720px
+
+@media (min-width: $md2+px)
+	.container
+		max-width: 960px
+
+@media (min-width: $md1+px)
+	.container
+		max-width: $maxWidthContainer + px
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	&._lock
+		overflow-y: hidden
+
+ul
+	padding: 0
+	margin: 0
+
+.wrapper
+	width: 100%
+	min-height: 100%
+	// overflow: hidden
+	display: flex
+	flex-direction: column
+	&._loaded
+
+
+.page 
+	flex: 1 1 auto
+	padding: 100px 30px 30px 30px
+	display: flex
+	// .page__side
+	&__side 
+		flex: 0 0 300px
+		padding: 0px 20px 0px 0px
+	
+	// .page__item
+	&__item 
+	
+	// .page__body
+	&__body 
+		flex: 1 1 auto
+		min-width: 0
+
+.tabs-block 
+	margin: 0px 0px 50px 0px
+	// .tabs-block__nav
+	&__nav 
+		display: flex
+		margin: 0px -2px
+	
+	// .tabs-block__item
+	&__item 
+		flex: 0 1 33.333%
+		margin: 0px 2px
+		background-color: #7a956b
+		padding: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+		&._active 
+			background-color: #77608d
+		
+	
+	// .tabs-block__body
+	&__body 
+		padding: 20px 0px 0px 0px
+	
+	// .tabs-block__block
+	&__block 
+	
+.spollers-block 
+	margin: 0px 0px 50px 0px
+	// .spollers-block__item
+	&__item 
+		margin: 0px 0px 20px 0px
+		&:last-child 
+			margin: 0px 0px 0px 0px
+		
+	
+	// .spollers-block__title
+	&__title 
+		background-color: #794f45
+		cursor: pointer
+		padding: 20px 70px 20px 20px
+		position: relative
+		&::before 
+			content: ""
+			width: 20px
+			background-color: #fff
+			height: 2px
+			transition: transform 0.3s ease 0s
+			transform: translate(0, -50%) rotate(-45deg)
+			position: absolute
+			right: 15px
+			top: 50%
+		
+		&::after 
+			content: ""
+			width: 20px
+			background-color: #fff
+			height: 2px
+			transition: transform 0.3s ease 0s
+			transform: translate(0, -50%) rotate(45deg)
+			position: absolute
+			right: 29px
+			top: 50%
+		
+		&._active 
+			&::before 
+				transform: translate(0, -50%) rotate(45deg)
+			
+			&::after 
+				transform: translate(0, -50%) rotate(-45deg)
+			
+	// .spollers-block__body
+	&__body 
+		display: none
+		padding: 20px 0px 0px 0px
+	
+.form 
+	margin: 0px 0px 50px 0px
+	// .form__line
+	&__line 
+		margin: 0px 0px 20px 0px
+	
+	// .form__label
+	&__label 
+		display: inline-block
+		margin: 0px 0px 15px 0px
+
+.slider 
+	margin: 0px 0px 50px 0px
+
+.text 
+	transform: translate(0px, 100px)
+	opacity: 0
+	transition: all 0.3s ease 0s
+	margin: 0px 0px 50px 0px
+	a 
+		color: red
+	
+	&._active 
+		transform: translate(0px, 0px)
+		opacity: 1
+	
+.price 
+	// .price__range
+	&__range 
+	
+	// .price__inputs
+	&__inputs 
+		display: flex
+		input 
+			margin: 0px 10px 0px 0px
+
+.gallery-block 
+	display: flex
+	flex-wrap: wrap
+	margin: 0px -10px
+	// .gallery-block__item
+	&__item 
+		flex: 0 1 33.333%
+		margin: 0px 0px 20px 0px
+		padding: 0px 10px
+		img 
+			max-width: 100%
