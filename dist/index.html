@@ -1,7 +1,6 @@
 
 
-<div class="wrapper">
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -43,6 +42,9 @@
 			</div>
 		</div>
 	</header>
+
+<div class="wrapper">
+	
 	<!-- Контент -->
 	<main class="page">
 	<div class="page__side _side-wrapper">
@@ -54,7 +56,28 @@
 			distinctio doloremque ducimus?
 		</div>
 	</div>
+	<label class="checkbox">
+		<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+		<span class="checkbox__text"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="">Условиями</a></span></span>
+	</label>
 	<div class="page__body">
+		<div class="options">
+			<label class="options__item">
+				<input class="options__input" checked type="radio" value="1" name="form[option]">
+				<span class="options__text"><span>Text #1</span></span>
+			</label>
+			<label class="options__item">
+				<input class="options__input" type="radio" value="2" name="form[option]">
+				<span class="options__text"><span>Text #2</span></span>
+			</label>
+		</div>
+		<div class="quantity">
+			<div class="quantity__button quantity__button_plus"></div>
+			<div class="quantity__input">
+				<input autocomplete="off" type="text" name="form[]" value="1">
+			</div>
+			<div class="quantity__button quantity__button_minus"></div>
+		</div>
 		<div class="tabs-block _scr-item _tabs">
 			<nav class="tabs-block__nav">
 				<div class="tabs-block__item _tabs-item _active">Таб №1</div>

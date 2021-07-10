@@ -2,6 +2,131 @@
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
+.tabs-block 
+	margin: 0px 0px 50px 0px
+	// .tabs-block__nav
+	&__nav 
+		display: flex
+		margin: 0px -2px
+	
+	// .tabs-block__item
+	&__item 
+		flex: 0 1 33.333%
+		margin: 0px 2px
+		background-color: #7a956b
+		padding: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+		&._active 
+			background-color: #77608d
+		
+	
+	// .tabs-block__body
+	&__body 
+		padding: 20px 0px 0px 0px
+	
+	// .tabs-block__block
+	&__block 
+	
+.spollers-block 
+	margin: 0px 0px 50px 0px
+	// .spollers-block__item
+	&__item 
+		margin: 0px 0px 20px 0px
+		&:last-child 
+			margin: 0px 0px 0px 0px
+		
+	
+	// .spollers-block__title
+	&__title 
+		background-color: #794f45
+		cursor: pointer
+		padding: 20px 70px 20px 20px
+		position: relative
+		&::before 
+			content: ""
+			width: 20px
+			background-color: #fff
+			height: 2px
+			transition: transform 0.3s ease 0s
+			transform: translate(0, -50%) rotate(-45deg)
+			position: absolute
+			right: 15px
+			top: 50%
+		
+		&::after 
+			content: ""
+			width: 20px
+			background-color: #fff
+			height: 2px
+			transition: transform 0.3s ease 0s
+			transform: translate(0, -50%) rotate(45deg)
+			position: absolute
+			right: 29px
+			top: 50%
+		
+		&._active 
+			&::before 
+				transform: translate(0, -50%) rotate(45deg)
+			
+			&::after 
+				transform: translate(0, -50%) rotate(-45deg)
+			
+	// .spollers-block__body
+	&__body 
+		display: none
+		padding: 20px 0px 0px 0px
+	
+.form 
+	margin: 0px 0px 50px 0px
+	// .form__line
+	&__line 
+		margin: 0px 0px 20px 0px
+	
+	// .form__label
+	&__label 
+		display: inline-block
+		margin: 0px 0px 15px 0px
+
+.slider 
+	margin: 0px 0px 50px 0px
+
+.text 
+	transform: translate(0px, 100px)
+	opacity: 0
+	transition: all 0.3s ease 0s
+	margin: 0px 0px 50px 0px
+	a 
+		color: red
+	
+	&._active 
+		transform: translate(0px, 0px)
+		opacity: 1
+	
+.price 
+	// .price__range
+	&__range 
+	
+	// .price__inputs
+	&__inputs 
+		display: flex
+		input 
+			margin: 0px 10px 0px 0px
+
+.gallery-block 
+	display: flex
+	flex-wrap: wrap
+	margin: 0px -10px
+	// .gallery-block__item
+	&__item 
+		flex: 0 1 33.333%
+		margin: 0px 0px 20px 0px
+		padding: 0px 10px
+		img 
+			max-width: 100%
+
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
 .row:after 
 	display: block
