@@ -1,3 +1,32 @@
+.no-pc
+	display: none
+	@media (max-width: $md2+px)
+		display: block !important
+
+.only-pc
+	@media (max-width: $md2+px)
+		display: none		
+
+.no-tablet
+	@media (max-width: $md3+px)
+		display: none
+
+.only-tablet
+	display: none
+	@media (max-width: $md4+px)
+		display: block !important
+
+.no-mobile
+	@media (max-width: $md4+px)
+		display: none
+
+.only-mobile
+	display: none
+	@media (max-width: $md4+px)
+		display: block !important
+				
+
+				
 // @media (max-width: $md1+px)
 
 // @media (max-width: $md2+px)
