@@ -13,6 +13,8 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+
+@import 'node_modules/swiper/swiper.min' // optional, adding swiepr classes
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
@@ -87,6 +89,11 @@ ul
 
 label, p
 	margin-bottom: 0
+
+button
+	border: none
+	background: $accent
+	color: #fff
 
 a
 	color: $textcolor

@@ -25,20 +25,22 @@
 <body>
 
 	<header class="header">
-		<div class="header__content _container">
-			<div class="header__menu menu">
-				<div class="menu__icon icon-menu">
-					<span></span>
-					<span></span>
-					<span></span>
+		<div class="header__container _container">
+			<div class="header__wrap">
+				<div class="header__menu menu">
+					<div class="menu__icon icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<nav class="menu__nav">
+						<ul>
+							<li><a class="menu__link" href="/">Главная</a></li>
+							<li><a class="menu__link" href="/">Услуги</a></li>
+							<li><a class="menu__link" href="/">Контакты</a></li>
+						</ul>
+					</nav>
 				</div>
-				<nav class="menu__body">
-					<ul class="menu__list">
-						<li><a href="#tabs-block" class="menu__link _goto-block">Табы</a></li>
-						<li><a href="#form" class="menu__link _goto-block">Форма</a></li>
-						<li><a href="#gallery-block" class="menu__link _goto-block">Галерея</a></li>
-					</ul>
-				</nav>
 			</div>
 		</div>
 	</header>
@@ -56,11 +58,18 @@
 			distinctio doloremque ducimus?
 		</div>
 	</div>
-	<label class="checkbox">
-		<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-		<span class="checkbox__text"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="">Условиями</a></span></span>
-	</label>
 	<div class="page__body">
+		
+		<div class="card-item">
+	No
+</div>
+
+		
+		<label class="checkbox">
+			<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+			<span class="checkbox__text"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a
+						href="">Условиями</a></span></span>
+		</label>
 		<div class="options">
 			<label class="options__item">
 				<input class="options__input" checked type="radio" value="1" name="form[option]">
@@ -70,13 +79,6 @@
 				<input class="options__input" type="radio" value="2" name="form[option]">
 				<span class="options__text"><span>Text #2</span></span>
 			</label>
-		</div>
-		<div class="quantity">
-			<div class="quantity__button quantity__button_plus"></div>
-			<div class="quantity__input">
-				<input autocomplete="off" type="text" name="form[]" value="1">
-			</div>
-			<div class="quantity__button quantity__button_minus"></div>
 		</div>
 		<div class="tabs-block _scr-item _tabs">
 			<nav class="tabs-block__nav">
@@ -156,18 +158,19 @@
 			</div>
 			<div class="form__line">
 				<div class="quantity">
-					<div class="quantity__button quantity__button_plus"></div>
+					<div class="quantity__button quantity__button_minus"></div>
 					<div class="quantity__input">
 						<input autocomplete="off" type="text" name="form[]" value="1">
 					</div>
-					<div class="quantity__button quantity__button_minus"></div>
+					<div class="quantity__button quantity__button_plus"></div>
 				</div>
 			</div>
 			<div class="form__line">
 				<div class="price">
 					<div class="price__range"></div>
 					<div class="price__inputs">
-						<input data-value="yoyoyoo" id="price-start" autocomplete="off" type="text" name="form[]" class="input req">
+						<input data-value="yoyoyoo" id="price-start" autocomplete="off" type="text" name="form[]"
+							class="input req">
 						<input id="price-end" autocomplete="off" type="text" name="form[]" class="input req">
 					</div>
 				</div>
@@ -186,7 +189,8 @@
 				numquam nam.
 			</div>
 			<div class="slider__slide">
-				Lorem <a href="#callback" data-video="OsF9H7yRnvU" class="_popup-link">ipsum</a> ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio, inventore harum nesciunt enim
+				Lorem <a href="#callback" data-video="OsF9H7yRnvU" class="_popup-link">ipsum</a> ipsum dolor sit amet
+				consectetur adipisicing elit. Esse distinctio, inventore harum nesciunt enim
 				quibusdam sapiente quisquam dolor non tempore voluptates, at, totam eos delectus corrupti fugiat in
 				numquam nam.
 			</div>
@@ -204,7 +208,7 @@
 		</div>
 
 		<div class="form-custom _scr-item">
-			
+
 		</div>
 
 		<div class="gallery-block _scr-item _gallery">
