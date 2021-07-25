@@ -34,7 +34,7 @@ function map(n) {
 	};
 	var map = new google.maps.Map(document.getElementById('map'), options);
 	var icon = {
-		url: 'img/icons/map.svg',
+		url: 'images/dist/icons/map.svg',
 		scaledSize: new google.maps.Size(18, 20),
 		anchor: new google.maps.Point(9, 10)
 	}
@@ -104,7 +104,7 @@ function map(n) {
 			// Необходимо указать данный тип макета.
 			iconLayout: 'default#imageWithContent',
 			// Своё изображение иконки метки.
-			iconImageHref: 'img/icons/map.svg',
+			iconImageHref: 'images/dist/icons/map.svg',
 			// Размеры метки.
 			iconImageSize: [40, 40],
 			// Смещение левого верхнего угла иконки относительно

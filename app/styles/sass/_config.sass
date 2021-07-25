@@ -1,8 +1,11 @@
 // USER VARIABLES SECTION
 $accent: orange // Accent Color
-$fontsize: 16px // Body Font Size
+
 $textcolor: #333 // Text Color
+
+$fontsize: 16px // Body Font Size
 $lineheight: 1.65 // Document Line Height
+
 $userfont: roboto-oh5, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
@@ -81,6 +84,15 @@ body
 ul
 	padding: 0
 	margin: 0
+
+label, p
+	margin-bottom: 0
+
+a
+	color: $textcolor
+	&:hover
+		color: $textcolor
+		text-decoration: underline
 
 .wrapper
 	width: 100%

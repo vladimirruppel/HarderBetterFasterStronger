@@ -161,8 +161,9 @@ textarea.input
 		height: 0
 		opacity: 0
 		visibility: hidden
-		&:checked + .checkbox__text:before 
-			background: #000 url("../images/dist/icons/check.svg") center no-repeat
+		&:checked + .checkbox__text
+			&::before 
+				background: #000 url("../images/dist/icons/check.svg") center no-repeat
 		
 	
 	// .checkbox__text
@@ -170,8 +171,8 @@ textarea.input
 		display: inline-flex
 		align-items: center
 		position: relative
-		font-size: 16px
-		color: #ffffff
+		font-size: $fontsize
+		color: $textcolor
 		letter-spacing: -0.3px
 		line-height: calc(20 / 16)
 		cursor: pointer
@@ -189,7 +190,6 @@ textarea.input
 		
 	
 	a 
-		color: #fff
 		text-decoration: underline
 		@media (min-width: 992px) 
 			&:hover 
@@ -239,19 +239,17 @@ textarea.input
 		display: inline-flex
 		align-items: center
 		position: relative
-		font-size: 16px
-		color: #ffffff
 		letter-spacing: -0.3px
 		line-height: calc(20 / 16)
 		&:before 
 			content: ""
 			align-self: flex-start
 			margin: 0px 14px 0px 0px
-			flex: 0 0 20px
+			flex: 0 0 18px
 			left: 0
 			top: 0
 			border-radius: 50%
-			width: 20px
+			width: 18px
 			height: 18px
 			background: #fff
 			border: 1px solid #a7a9ac
@@ -265,7 +263,7 @@ textarea.input
 			border-radius: 50%
 			background-color: #77243a
 			position: absolute
-			left: 5px
+			left: 4px
 			top: 4px
 		
 	
@@ -308,7 +306,7 @@ textarea.input
 	height: 14px
 	top: 0
 	left: 0
-	background: url("../img/icons/bg_rating_active.svg") 0 0 no-repeat
+	background: url("../images/dist/icons/bg_rating_active.svg") 0 0 no-repeat
 	z-index: 2
 	background-size: 85px 100%
 
